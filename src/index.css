@@ -3,7 +3,7 @@
   --columns: 5;
   columns: var(--columns);
   gap: var(--gap);
-  margin: 0 auto;
+  margin: 2em auto;
   height: 100%;
 }
 
@@ -22,4 +22,8 @@
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
+}
+
+.github-link {
+  margin-bottom: 1em;
 }

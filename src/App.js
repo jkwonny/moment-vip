@@ -17,7 +17,7 @@ function App() {
     setPageNumber((prevPage) => prevPage + 1);
     try {
       const data = await fetch(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.FLICKER_API_KEY}&text=${input}&format=json&nojsoncallback=1&page=${pageNumber}`
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.REACT_APP_API_KEY}&text=${input}&format=json&nojsoncallback=1&page=${pageNumber}`
       );
       const cleanData = await data.json();
       let photoArray = cleanData.photos.photo;
@@ -40,7 +40,7 @@ function App() {
     setLoading(true);
     try {
       const data = await fetch(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.FLICKER_API_KEY}&text=${input}&format=json&nojsoncallback=1&page=${pageNumber}`
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.REACT_APP_API_KEY}&text=${input}&format=json&nojsoncallback=1&page=${pageNumber}`
       );
       const cleanData = await data.json();
       const photoArray = cleanData.photos.photo;
@@ -58,7 +58,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Masonry Grid Photo Search</h1>
+      <h1>Moment Masonry Grid Photo Search</h1>
+      <div>Here is the github repo for this short take home project</div>
+      <div className="github-link">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/mister-opm/moment-vip"
+        >
+          https://github.com/mister-opm/moment-vip
+        </a>
+      </div>
       <input type="text" value={input} onChange={handleChange} />
       <button type="button" onClick={handleClick}>
         Search
