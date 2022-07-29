@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Photo Search</h1>
+      <h1>Masonry Grid Photo Search</h1>
       <input type="text" value={input} onChange={handleChange} />
       <button type="button" onClick={handleClick}>
         Search
